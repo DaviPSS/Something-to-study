@@ -1,0 +1,451 @@
+/* *************************************************************************
+*    ex1.txt, V 0.1                                                        *
+*    tabelas verdades para implicação e equivalência                       *
+*                                                                          *
+*    Copyright (C) 2017 by Davi Pedro Da Silva Sitonio                     *
+*                                                                          *
+*    This program is free software; you can redistribute it and/or modify  *
+*    it under the terms of the GNU General Public License as published by  *
+*    the Free Software Foundation; either version 2 of the License, or     *
+*    (at your option) any later version.                                   *
+*                                                                          *
+*    This program is distributed in the hope that it will be useful,       *
+*    but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+*    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+*    GNU General Public License for more details.                          *
+*                                                                          *
+*    You should have received a copy of the GNU General Public License     *
+*    along with this program; if not, write to the                         *
+*    Free Software Foundation, Inc.,                                       *
+*    59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+*                                                                          *
+*    To contact the author, please write to:                               *
+*    Davi Pedro Da Silva Sitonio <davisitonio@gmail.com>                   *
+*    Webpage: https://github.com/DaviPSS                                   *
+*    Phone: +55 (81) 99738-2222                                            *
+* ************************************************************************ *
+* 
+*/
+Tabela verdade das equivalencias.
+Turma: LM
+Período: 2017s2
+Prof.: Dr. Ruben Carlo Bernate
+Nome: Davi Pedro Da Silva Sitonio
+Data: 2017-08-31
+
+        Implicações tautológicas:
+
+        MP: Modus Ponems:  
+    
+                a        b   
+    | p | q | p → q | p ۸ a | b ⇒ q |
+    | v | v |   v   |   v   |   v   |
+    | v | f |   f   |   f   |   v   |
+    | f | v |   v   |   f   |   v   |  
+    | f | f |   v   |   f   |   v   |
+
+    conclusão: b ⇒ q é uma tautologia, então também é uma implicação tautológica.
+
+        MT: Modus Tollens
+    
+              a      b               d
+    | p | q | ¬q | p →  q | a ۸ b | ¬ p | d ⇒  b |
+    | v | v | f  |   v    |   f   |  f  |   v    |
+    | v | f | v  |   f    |   f   |  f  |   v    |
+    | f | v | f  |   v    |   f   |  v  |   v    |
+    | f | f | v  |   v    |   v   |  v  |   v    |
+
+    conclusão: d ⇒  b é uma tautologia, então também é uma implicação tautológica.
+
+        SH: Silogismo Histórico
+    
+                    a        b        c       d       
+    | p | q | r | p →  q | q →  r | a ۸ b | p →  r | c ⇒  d |
+    | v | v | v |   v    |   v    |   v   |   v    |   v    |
+    | v | v | f |   v    |   f    |   f   |   f    |   v    |
+    | v | f | v |   f    |   v    |   f   |   v    |   v    |
+    | v | f | f |   f    |   v    |   f   |   f    |   v    |
+    | f | v | v |   v    |   v    |   v   |   v    |   v    |
+    | f | v | f |   v    |   f    |   f   |   v    |   v    |
+    | f | f | v |   v    |   v    |   v   |   v    |   v    |
+    | f | f | f |   v    |   v    |   v   |   v    |   v    |
+
+    conclusão: c ⇒  d é uma tautologia, então também é uma implicação tautológica.
+
+        SD: Silogismo Disjuntivo
+               
+                a     b      c
+    | p | q | p ∨ q | ¬p | a ۸ b | c ⇒  q |
+    | v | v |   v   | f  |   f   |   v    |
+    | v | f |   v   | f  |   f   |   v    |
+    | f | v |   v   | v  |   f   |   v    |
+    | f | f |   f   | v  |   f   |   v    |
+
+    conclusão: c ⇒  q é uma tautologia, então também é uma implicação tautológica.
+
+        SM: Simplificação
+               
+                a
+    | p | q | p ۸ q | a ⇒  p |
+    | v | v |   v   |   v    |
+    | v | f |   f   |   v    |
+    | f | v |   f   |   v    |
+    | f | f |   f   |   v    |
+
+    conclusão: a ⇒  p é uma tautologia, então também é uma implicação tautológica.
+
+        AD: Adição
+               
+                a
+    | p | q | p ∨ q | p ⇒  a |
+    | v | v |   v   |   v    |
+    | v | f |   v   |   v    |
+    | f | v |   v   |   v    |
+    | f | f |   f   |   v    |
+
+    conclusão: p ⇒  a é uma tautologia, então também é uma implicação tautológica.
+
+        EL: Eliminação
+                   
+                    a       b      c      d       e
+    | p | q | r | q ∨ r | p →  a | ¬q | b ۸ c | p →  r | d ⇒  e |
+    | v | v | v |   v   |   v    |  f |   f   |   v    |   v    |
+    | v | v | f |   v   |   v    |  f |   f   |   f    |   v    |
+    | v | f | v |   v   |   v    |  v |   v   |   v    |   v    |
+    | v | f | f |   f   |   f    |  v |   f   |   f    |   v    |
+    | f | v | v |   v   |   v    |  f |   f   |   v    |   v    |
+    | f | v | f |   v   |   v    |  f |   f   |   v    |   v    |
+    | f | f | v |   v   |   v    |  v |   v   |   v    |   v    |
+    | f | f | f |   f   |   v    |  v |   v   |   v    |   v    |
+
+    conclusão: d ⇒  e é uma tautologia, então também é uma implicação tautológica.
+
+        PC: Prova por Caos
+                   
+                    a        b        c       d       e            
+    | p | q | r | p →  r | q →  r | a ∧ b | p ∨ q | d →  r | c ⇒  e |
+    | v | v | v |   v    |   v    |   v   |   v   |   v    |   v    |
+    | v | v | f |   f    |   f    |   f   |   v   |   f    |   v    |
+    | v | f | v |   v    |   v    |   v   |   v   |   v    |   v    |
+    | v | f | f |   f    |   v    |   f   |   v   |   f    |   v    |
+    | f | v | v |   v    |   v    |   v   |   v   |   v    |   v    |
+    | f | v | f |   v    |   f    |   f   |   v   |   f    |   v    |
+    | f | f | v |   v    |   v    |   v   |   f   |   v    |   v    |
+    | f | f | f |   v    |   v    |   v   |   f   |   v    |   v    |
+
+    conclusão: c ⇒  e é uma tautologia, então também é uma implicação tautológica.
+
+
+
+        Equivalência Tautológica:
+    
+        CM: Comutativa
+               
+                a       b
+    | p | q | p ∧ q | q ∧ p | a ⇔  b |
+    | v | v |   v   |   v   |    v   |
+    | v | f |   f   |   f   |    v   |
+    | f | v |   f   |   f   |    v   |
+    | f | f |   f   |   f   |    v   |
+
+    conclusão: a  ⇔  b é uma tautologia, então também é uma equivalência tautológica.
+               
+                a       b   
+    | p | q | p ∨ q | q ∨ p | a  ⇔  b |
+    | v | v |   v   |   v   |    v    |
+    | v | f |   v   |   v   |    v    |
+    | f | v |   v   |   v   |    v    |
+    | f | f |   f   |   f   |    v    |
+
+    conclusão: a  ⇔  b é uma tautologia, então também é uma equivalência tautológica.
+   
+        AS: Associativa   
+                    
+                    a       b       c       d
+    | p | q | r | p ∧ q | a ∧ r | q ∧ r | p ∧ c | b  ⇔  d |
+    | v | v | v |   v   |   v   |   v   |   v   |    v    |
+    | v | v | f |   v   |   f   |   f   |   f   |    v    |
+    | v | f | v |   f   |   f   |   f   |   f   |    v    |
+    | v | f | f |   f   |   f   |   f   |   f   |    v    |
+    | f | v | v |   f   |   f   |   f   |   f   |    v    |
+    | f | v | f |   f   |   f   |   f   |   f   |    v    |
+    | f | f | v |   f   |   f   |   f   |   f   |    v    |
+    | f | f | f |   f   |   f   |   f   |   f   |    v    |
+
+    conclusão: b  ⇔  d é uma tautologia, então também é uma equivalênia tautológica.
+    
+                    
+                    a       b       c       d
+    | p | q | r | p ∨ q | a ∨ r | q ∨ r | p ∨ c | b  ⇔  d |
+    | v | v | v |   v   |   v   |   v   |   v   |    v    |
+    | v | v | f |   v   |   v   |   v   |   v   |    v    |
+    | v | f | v |   v   |   v   |   v   |   v   |    v    |
+    | v | f | f |   v   |   v   |   f   |   v   |    v    |
+    | f | v | v |   v   |   v   |   v   |   v   |    v    |
+    | f | v | f |   v   |   v   |   v   |   v   |    v    |
+    | f | f | v |   f   |   v   |   v   |   v   |    v    |
+    | f | f | f |   f   |   f   |   f   |   f   |    v    |
+    
+    conclusão: b  ⇔  d é uma tautologia, então também é uma equivalência tautológica.
+    
+        ID: Independente
+            
+            a
+    | p | p ∧ p | a  ⇔  p |
+    | v |   v   |    v    |
+    | f |   f   |    v    |
+
+    conclusão: a  ⇔  p é uma tautologia, então também é uma equivalência tautológica.
+            
+            a
+    | p | p ∨ p | a  ⇔  p |
+    | v |   v   |    v    |
+    | f |   f   |    v    |
+
+    conclusão: a  ⇔  p é uma tautologia, então também é uma equivalência tautológica.
+
+        AB: Absorção
+                
+                a       b
+    | p | r | p ∨ r | p ∧ a | b  ⇔  p |
+    | v | v |   v   |   v   |    v    |
+    | v | f |   v   |   v   |    v    |
+    | f | v |   v   |   f   |    v    |
+    | f | f |   f   |   f   |    v    |
+
+    conclusão: b  ⇔  p é uma tautologia, então também é uma equivalência tautológica.
+                
+                a       b
+    | p | r | p ∧ r | p ∨ a | b  ⇔  p |
+    | v | v |   v   |   v   |    v    |
+    | v | f |   f   |   v   |    v    |
+    | f | v |   f   |   f   |    v    |
+    | f | f |   f   |   f   |    v    |
+
+    conclusão: b  ⇔  p é uma tautologia, então também é uma equivalência tautológica.
+
+        DT: Distributiva
+    
+                    a       b       c       d       e
+    | p | q | r | q ∨ r | p ∧ a | p ∧ q | p ∧ r | c ∨ d | b  ⇔  e |
+    | v | v | v |   v   |   v   |   v   |   v   |   v   |    v    |
+    | v | v | f |   v   |   v   |   v   |   f   |   v   |    v    |
+    | v | f | v |   v   |   v   |   f   |   v   |   v   |    v    |
+    | v | f | f |   f   |   f   |   f   |   f   |   f   |    v    |
+    | f | v | v |   v   |   f   |   f   |   f   |   f   |    v    |
+    | f | v | f |   v   |   f   |   f   |   f   |   f   |    v    |
+    | f | f | v |   v   |   f   |   f   |   f   |   f   |    v    |
+    | f | f | f |   f   |   f   |   f   |   f   |   f   |    v    |
+
+    conclusão: b  ⇔  e é uma tautologia, então também é uma equivalência tautológica.
+
+    
+                    a       b       c       d       e
+    | p | q | r | q ∧ r | p ∨ a | p ∨ q | p ∨ r | c ∧ d | b  ⇔  e |
+    | v | v | v |   v   |   v   |   v   |   v   |   v   |    v    |
+    | v | v | f |   f   |   v   |   v   |   v   |   v   |    v    |
+    | v | f | v |   f   |   v   |   v   |   v   |   v   |    v    |
+    | v | f | f |   f   |   v   |   v   |   v   |   v   |    v    |
+    | f | v | v |   v   |   v   |   v   |   v   |   v   |    v    |
+    | f | v | f |   f   |   f   |   v   |   f   |   f   |    v    |
+    | f | f | v |   f   |   f   |   f   |   v   |   f   |    v    |
+    | f | f | f |   f   |   f   |   f   |   f   |   f   |    v    |
+    
+    conclusão: b  ⇔  e é uma tautologia, então também é uma equivalência tautológica.
+    
+    
+                    a       b        c        d        e
+    | p | q | r | q ∧ r | p →  a | p →  q | p →  r | c ∧ d | b  ⇔  e |
+    | v | v | v |   v   |   v    |   v    |   v    |   v   |    v    |
+    | v | v | f |   f   |   f    |   v    |   f    |   f   |    v    |
+    | v | f | v |   f   |   f    |   f    |   v    |   f   |    v    |
+    | v | f | f |   f   |   f    |   f    |   f    |   f   |    v    |
+    | f | v | v |   v   |   v    |   v    |   v    |   v   |    v    |
+    | f | v | f |   f   |   v    |   v    |   v    |   v   |    v    |
+    | f | f | v |   f   |   v    |   v    |   v    |   v   |    v    |
+    | f | f | f |   f   |   v    |   v    |   v    |   v   |    v    |
+
+    conclusão: b  ⇔  e é uma tautologia, então é uma equivalência tautológica.
+
+
+                    a       b        c        d        e
+    | p | q | r | q ∨ r | p →  a | p →  q | p →  r | c ∨ d | b  ⇔  e |
+    | v | v | v |   v   |   v    |   v    |   v    |   v   |    v    |
+    | v | v | f |   v   |   v    |   v    |   f    |   v   |    v    |
+    | v | f | v |   v   |   v    |   f    |   v    |   v   |    v    |
+    | v | f | f |   f   |   f    |   f    |   f    |   f   |    v    |
+    | f | v | v |   v   |   v    |   v    |   v    |   v   |    v    |
+    | f | v | f |   v   |   v    |   v    |   v    |   v   |    v    |
+    | f | f | v |   v   |   v    |   v    |   v    |   v   |    v    |
+    | f | f | f |   f   |   v    |   v    |   v    |   v   |    v    |
+   
+    conclusão: b  ⇔  e é uma tautologia, então é uma equivalência tautológica.
+
+        DM: Leis de D'Morgan
+                
+                a     b    c    d      e
+    | p | q | p ∧ q | ¬a | ¬p | ¬q | c ∨ d | b  ⇔  e |  
+    | v | v |   v   | f  | f  | f  |   f   |    v    | 
+    | v | f |   f   | v  | f  | v  |   v   |    v    |
+    | f | v |   f   | v  | v  | f  |   v   |    v    |
+    | f | f |   f   | v  | v  | v  |   v   |    v    |
+
+    conclusão: b  ⇔  e é uma tautologia, então é uma equivalência tautológica.
+
+                 a     b    c    d      e
+     | p | q | p ∨ q | ¬a | ¬p | ¬q | c ∧ d | b  ⇔  e |
+     | v | v |   v   | f  | f  | f  |   f   |    v    |
+     | v | f |   v   | f  | f  | v  |   f   |    v    |
+     | f | v |   v   | f  | v  | f  |   f   |    v    |
+     | f | f |   f   | v  | v  | v  |   v   |    v    |
+                 
+     conclusão: b  ⇔  e é uma tautologia, então é uma equivalência tautológica.
+        
+        IM: Def. Implicação
+
+                 a      b      c
+     | p | q | p →  q | ¬p | b ∨ q | a  ⇔  c |
+     | v | v |   v    | f  |   v   |    v    |
+     | v | f |   f    | f  |   f   |    v    | 
+     | f | v |   v    | v  |   v   |    v    |     
+     | f | f |   v    | v  |   v   |    v    | 
+     
+     conclusão: a  ⇔  c é uma tautologia, então é uma equivalência tautológica.
+     
+                  a      b      c      d
+     | p | q | p →  q | ¬q | p ∧ b | ¬ c | a  ⇔  d |
+     | v | v |   v    | f  |   f   |  v  |    v    |
+     | v | f |   f    | v  |   v   |  f  |    v    |
+     | f | v |   v    | f  |   f   |  v  |    v    |
+     | f | f |   v    | v  |   f   |  v  |    v    |
+          
+     conclusão: a  ⇔  d é uma tautologia, então é uma equivalência tautológica.
+
+        BI: Def.  Bicondicional
+    
+                  a        b        c        d
+     | p | q | p  ↔  q | p →  q | q →  p | b ∧ c | a  ⇔  d |
+     | v | v |    v    |   v    |   v    |   v   |    v    |   
+     | v | f |    f    |   f    |   v    |   f   |    v    |
+     | f | v |    f    |   f    |   f    |   f   |    v    |
+     | f | f |    v    |   f    |   v    |   v   |    v    |
+
+     conclusão: a  ⇔  d é uma tautologia, então é uma equivalência tautológica.
+
+                  a      b      c     d      e       f
+     | p | q | p  ↔  q | ¬p | b ∨ q | ¬q | d ∨ p | c ∧ e | a  ⇔  f |
+     | v | v |    v    |  f |   v   | f  |   v   |   v   |    v    |
+     | v | f |    f    |  f |   f   | v  |   v   |   f   |    v    |
+     | f | v |    f    |  v |   v   | f  |   f   |   f   |    v    |
+     | f | f |    v    |  v |   v   | v  |   v   |   v   |    v    |
+     
+     conclusão: a  ⇔  f é uma tautologia, então é uma equivalência tautológica.
+
+        OX: Def. ou-exclusivo
+
+                a       b       c     d      e 
+    | p | q | p + q | p ∨ q | p ∧ q | ¬c | b ∧ d | a  ⇔  e |
+    | v | v |   f   |   v   |   v   | f  |   f   |    v    |
+    | v | f |   v   |   v   |   f   | v  |   v   |    v    |
+    | f | v |   v   |   v   |   f   | v  |   v   |    v    |
+    | f | f |   f   |   f   |   f   | v  |   f   |    v    |
+
+    conclusão: a  ⇔  e é uma tautologia, então também é uma equivalência tautológica.
+
+        NG: Negação
+
+          a    b
+    | p | ¬p | ¬a | p  ⇔  b |
+    | v | f  | v  |    v    |
+    | f | v  | f  |    v    |
+
+    conclusão: p  ⇔  é uma tautologia, então também é uma equivalência tautológica.
+
+        CP: Contraposição
+
+                a      b    c      d
+    | p | q | p →  q | ¬q | ¬p | b →  c | a  ⇔  d |
+    | v | v |   v    | f  | f  |   v    |    v    |
+    | v | f |   f    | v  | f  |   f    |    v    |
+    | f | v |   v    | f  | v  |   v    |    v    |
+    | f | f |   v    | v  | v  |   v    |    v    |
+
+    conclusão: a  ⇔  d é uma tautologia, então é uma equivalência tautológica.
+
+        XI: Exportação\Importação
+                                                                   →  Exportação
+                    a       b        c        d                    ←  Importação
+    | p | q | r | p ∧ q | a →  r | q →  r | p →  c | b  ⇔  d |
+    | v | v | v |   v   |   v    |   v    |   v    |    v    |
+    | v | v | f |   v   |   f    |   f    |   f    |    v    |
+    | v | f | v |   f   |   v    |   v    |   v    |    v    |
+    | v | f | f |   f   |   v    |   v    |   v    |    v    |
+    | f | v | v |   f   |   v    |   v    |   v    |    v    |
+    | f | v | f |   f   |   v    |   f    |   v    |    v    |
+    | f | f | v |   f   |   v    |   v    |   v    |    v    |
+    | f | f | f |   f   |   v    |   v    |   v    |    v    |
+
+    conclusão: b  ⇔  d é uma tautologia, logo é uma equivalência tautológica.
+
+        TP: Troca de Premissas
+    
+                    a        b        c        d
+    | p | q | r | q →  r | p →  a | p →  r | q →  c | b  ⇔  d |
+    | v | v | v |   v    |   v    |   v    |   v    |    v    |
+    | v | v | f |   f    |   f    |   f    |   f    |    v    |
+    | v | f | v |   v    |   v    |   v    |   v    |    v    |
+    | v | f | f |   v    |   v    |   f    |   v    |    v    |
+    | f | v | v |   v    |   v    |   v    |   v    |    v    |
+    | f | v | f |   f    |   v    |   v    |   v    |    v    |
+    | f | f | v |   v    |   v    |   v    |   v    |    v    |
+    | f | f | f |   v    |   v    |   v    |   v    |    v    |
+
+    conclusão: b  ⇔  é uma tautologia, logo é uma equivalência tautológica.
+
+        PV: Propriedades de V
+
+            a
+    | p | p ∧ V | a  ⇔  p |
+    | v |   v   |    v    |
+    | f |   f   |    v    |
+    
+    conclusão: a  ⇔  p é uma tautologia, então é uma equivalência tautológica.
+
+            a
+    | p | p ∨ V | a  ⇔  V |
+    | v |   v   |    v    |
+    | f |   v   |    v    |
+
+    conclusão: a  ⇔  V é uma tautologia, então é uma equivalência tautológica.
+
+                 a
+    | p | ¬p | p ∨ ¬p | a  ⇔  V |
+    | v | f  |   v    |    v    |
+    | f | v  |   v    |    v    |
+
+    conclusão: a  ⇔  V é uma tautologia, portanto é uma equivalência tautológica.
+
+
+        PF: Propriedades de F
+    
+            a
+    | p | p ∧ F | a  ⇔  F |
+    | v |   f   |    v    |
+    | f |   f   |    v    |
+
+    conclusão: a  ⇔  F é uma tautologia, portanto é uma equivalência tautológica.
+
+            a
+    | p | p ∨ F | a  ⇔  p |
+    | v |   v   |    v    |
+    | f |   f   |    v    |
+
+    conclusão: a  ⇔  p é uma tautologia, portanto é uma equivalência tautológica.
+
+          a      b
+    | p | ¬p | p ∧ a | b  ⇔  F |
+    | v | f  |   f   |    v    |
+    | f | v  |   f   |    v    |
+
+    conclusão: b  ⇔  F é uma tautologia, portanto é uma equivalência tautológica.
+
