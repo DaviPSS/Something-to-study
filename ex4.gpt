@@ -1,0 +1,76 @@
+/* ************************************************************************                               *
+*    ex4.gpt, V 0.1                                                        *
+*    Algoritmo para as notas do siga                                       *
+*                                                                          *
+*    Copyright (C) 2017 by Davi Pedro Da Silva Sitonio                     *
+*                                                                          *
+*    This program is free software; you can redistribute it and/or modify  *
+*    it under the terms of the GNU General Public License as published by  *
+*    the Free Software Foundation; either version 2 of the License, or     *
+*    (at your option) any later version.                                   *
+*                                                                          *
+*    This program is distributed in the hope that it will be useful,       *
+*    but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+*    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+*    GNU General Public License for more details.                          *
+*                                                                          *
+*    You should have received a copy of the GNU General Public License     *
+*    along with this program; if not, write to the                         *
+*    Free Software Foundation, Inc.,                                       *
+*    59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+*                                                                          *
+*    To contact the author, please write to:                               *
+*    Davi Pedro Da Silva Sitonio <davisitonio@gmail.com>                   *
+*    Webpage: https://github.com/DaviPSS                                   *
+*    Phone: +55 (81) 99738-2222                                            *
+* ************************************************************************ *
+* 
+*/
+algoritmo notas_do_siga;
+
+variáveis
+    a, b, c, f, x, y : real;
+fim-variáveis
+
+início
+    imprima("Quantas faltas voce tem: ");
+    f := leia();
+
+    se f >= 18 então
+        imprima("Reprovado por falta! ");
+    
+    senão
+        imprima("Digite sua primeira nota: ");
+        a := leia();
+        imprima("Digite sua segunda nota: ");
+        b := leia();
+   
+        x := (a + b)/2.0;
+
+        se x < 3 então
+            imprima("Voce foi reprovado direto!");
+        senão    
+            se x >= 7 então
+                imprima("Voce foi aprovado!");
+
+            senão
+                imprima("Digite sua nota da final: ");
+                c := leia();
+                
+                y := (x + c)/2.0;
+
+                se y >= 5 então
+                    imprima("Aprovado na final!");
+        
+                    senão
+                        imprima("Reprovado na final!");
+                fim-se
+           fim-se
+        fim-se   
+    fim-se
+fim    
+            
+
+
+
+
